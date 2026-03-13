@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h2>Student Dashboard</h2>
+            <div class="nav-user">
+                <span id="user-name"></span>
+                <button class="btn btn-secondary" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>Available Exams</h1>
+            <button class="btn btn-secondary" onclick="showMyResults()">My Results</button>
+        </div>
+
+        <div id="exams-list" class="exams-grid"></div>
+    </div>
+
+    <!-- Exam Attempt Modal -->
+    <div id="exam-attempt-modal" class="modal">
+        <div class="modal-content modal-large">
+            <div class="exam-header">
+                <h2 id="exam-title-attempt"></h2>
+                <div class="timer-container">
+                    <span>Time Remaining: </span>
+                    <span id="timer" class="timer"></span>
+                </div>
+            </div>
+            <div id="questions-container" class="questions-container"></div>
+            <div class="exam-actions">
+                <button class="btn btn-primary" onclick="submitExam()">Submit Exam</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div id="results-modal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close" onclick="closeModal('results-modal')">&times;</span>
+            <h2>Exam Results</h2>
+            <div id="results-content"></div>
+        </div>
+    </div>
+
+    <!-- My Results Modal -->
+    <div id="my-results-modal" class="modal">
+        <div class="modal-content modal-large">
+            <span class="close" onclick="closeModal('my-results-modal')">&times;</span>
+            <h2>My Results</h2>
+            <div id="my-results-content"></div>
+        </div>
+    </div>
+
+    <div id="message" class="message"></div>
+    <script src="js/student.js"></script>
+</body>
+</html>
+

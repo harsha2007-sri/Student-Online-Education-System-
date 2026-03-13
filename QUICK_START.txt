@@ -1,0 +1,121 @@
+═══════════════════════════════════════════════════════════════
+   ONLINE EXAMINATION SYSTEM - QUICK START GUIDE
+═══════════════════════════════════════════════════════════════
+
+📋 STEP 1: SETUP MONGODB (Choose ONE option)
+
+   OPTION A: MongoDB Atlas (Cloud - Easiest) ⭐ RECOMMENDED
+   ──────────────────────────────────────────────────────────
+   1. Go to: https://www.mongodb.com/cloud/atlas/register
+   2. Sign up (Free account)
+   3. Create a FREE cluster (M0 Sandbox)
+   4. Click "Connect" → "Connect your application"
+   5. Copy the connection string
+   6. Replace <password> with your database password
+   7. Add database name: ...mongodb.net/online-exam?retryWrites=true&w=majority
+   8. Create .env file in project folder with:
+      
+      PORT=3000
+      MONGODB_URI=paste-your-atlas-connection-string-here
+      JWT_SECRET=online-exam-secret-key-2024
+
+   OPTION B: Local MongoDB
+   ──────────────────────────────────────────────────────────
+   1. Download: https://www.mongodb.com/try/download/community
+   2. Install MongoDB
+   3. Start MongoDB service (usually auto-starts on Windows)
+   4. Create .env file with:
+      
+      PORT=3000
+      MONGODB_URI=mongodb://localhost:27017/online-exam
+      JWT_SECRET=online-exam-secret-key-2024
+
+═══════════════════════════════════════════════════════════════
+
+📋 STEP 2: INSTALL DEPENDENCIES (Already Done ✅)
+   npm install
+
+═══════════════════════════════════════════════════════════════
+
+📋 STEP 3: START THE SERVER
+   npm start
+
+   You should see:
+   ✅ Connected to MongoDB
+   Server running on http://localhost:3000
+
+═══════════════════════════════════════════════════════════════
+
+📋 STEP 4: OPEN IN BROWSER
+   Open your web browser and go to:
+   http://localhost:3000
+
+═══════════════════════════════════════════════════════════════
+
+📋 STEP 5: TEST THE APPLICATION
+
+   1. REGISTER AS FACULTY:
+      - Click "Register" tab
+      - Name: Dr. Smith
+      - Email: faculty@test.com
+      - Password: test123
+      - Role: Faculty
+      - Click "Register"
+
+   2. CREATE AN EXAM:
+      - Click "Create New Exam"
+      - Title: "Math Quiz"
+      - Duration: 30
+      - Start Time: Select current time
+      - End Time: Select 1 hour later
+      - Click "Create Exam"
+
+   3. ADD QUESTIONS:
+      - Click "Add Questions" on exam card
+      - Click "Add Question"
+      - Question: "What is 2+2?"
+      - Option A: "3"
+      - Option B: "4" ✓
+      - Option C: "5"
+      - Option D: "6"
+      - Correct Answer: B
+      - Click "Save All Questions"
+
+   4. REGISTER AS STUDENT:
+      - Logout (top right)
+      - Click "Register"
+      - Name: John Doe
+      - Email: student@test.com
+      - Password: test123
+      - Role: Student
+      - Click "Register"
+
+   5. ATTEMPT EXAM:
+      - Find "Math Quiz" (should be Active/Green)
+      - Click "Start Exam"
+      - Answer questions
+      - Click "Submit Exam"
+      - View results!
+
+═══════════════════════════════════════════════════════════════
+
+🔧 TROUBLESHOOTING
+
+   ❌ "Cannot connect to MongoDB"
+      → Check your .env file has correct MONGODB_URI
+      → For Atlas: Ensure IP is whitelisted (0.0.0.0/0 for testing)
+
+   ❌ "Port 3000 already in use"
+      → Change PORT in .env to 3001
+      → Access: http://localhost:3001
+
+   ❌ Server not starting
+      → Check terminal for error messages
+      → Ensure MongoDB is running/configured
+
+═══════════════════════════════════════════════════════════════
+
+📚 For detailed instructions, see: RUN_GUIDE.md
+
+═══════════════════════════════════════════════════════════════
+
