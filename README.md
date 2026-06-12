@@ -4,7 +4,7 @@ A web-based online examination system that enables faculty to create quizzes/tes
 
 ## Features
 
-- **User Authentication**: Register and login for Faculty, Students, and Admin
+- **User Authentication**: Register and login for Faculty, Students, and Admin role structure included for future implementation
 - **Exam Management**: Faculty can create exams with title, duration, and timing
 - **Question Management**: Add multiple-choice questions (MCQs) with 4 options
 - **Exam Attempt**: Students can attempt exams within specified time limits
@@ -63,9 +63,11 @@ A web-based online examination system that enables faculty to create quizzes/tes
 4. Answer questions within the time limit
 5. Submit exam to see instant results with correct answers
 
-### For Admin:
-1. Register/Login as Admin
-2. View system-wide reports and statistics
+### Future Enhancements:
+1. Admin Dashboard
+2. User Management
+3. System-wide reports and Analytics
+4. Role-based Administration
 
 ## API Endpoints
 
